@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --vermelho: #E50914;
+    --preto:  #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--preto);
+    font-family: 'Segoe UI';
+    color: white;
+}
+
+
+header .container { 
+    margin-top: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 36px;
+}
+
+header .logo {
+    margin-left: 50px;
+    margin-top: 3px;
+    color: var(--vermelho);
+    font-size: 40px;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 4px;
+}
+
+header nav a {
+    color: whitesmoke;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+header nav a:hover {
+    color: #b3b3b3;
+}
+
+header nav a img {
+    height: 17px;
+}
+
+#icones-direita {
+    margin-left: auto;
+}
+
+/* FIM DAS CONFIGURAÇÕES DO HEADER */
+
+/* Filme principal */
+
+.filme-principal {
+    font-size: 18px;
+    background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50)100%), url(../img/fundo-padrao.jpg);
+    background-size: cover;
+    height: 800px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .titulo {
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.filme-principal .botoes button img {
+    height: 10px;
+}
+
+.filme-principal .descricao {
+    margin-bottom: 40px;
+}
