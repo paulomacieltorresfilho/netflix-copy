@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/main.css">
-    
     <!-- owl css -->
     <link rel="stylesheet" href="assets/css/owl/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/owl/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    
     <title>Netflix</title>
 </head>
 <body>
@@ -40,23 +40,59 @@
                 </div>
             </div>
         </div>
-
-
     </main>
 
-
-    <script src="assets/js/owl/jquery.min.js"></script>
-    <script src="assets/js/owl/owl.carousel.min.js"></script>
-    <script src="https://kit.fontawesome.com/26e7278bf0.js" crossorigin="anonymous"></script>
-
+    <div class="carrossel-filmes em-alta">
+        <div class="container">
+            <h4>Em Alta</h4>
+            <div class="owl-carousel owl-theme">
+                <div class="item"><img></div>
+                <div class="item"><img></div>
+                <div class="item"><img></div>
+                <div class="item"><img></div>
+                <div class="item"><img></div>
+                <div class="item"><img></div>
+                <div class="item"><img></div>
+                <div class="item"><img></div>
+                <div class="item"><img></div>
+                <div class="item"><img></div>
+                <div class="item"><img></div>
+                <div class="item"><img></div>
+                <div class="item"><img></div>
+                <div class="item"><img></div>
+                <div class="item"><img></div>
+                <div class="item"><img></div>
+                <div class="item"><img></div>
+                <div class="item"><img></div>
+                <div class="item"><img></div>
+                <div class="item"><img></div>
+            </div>
+        </div>
+    </div>
+    
     <script>
         const API_PATH = 'https://api.themoviedb.org/3';
         const IMAGES_PATH = 'https://image.tmdb.org/t/p/original';
-        const NETFLIX_PROVIDER_ID = 8;
+        
+        const getResultsList = async (queryString) => {
+            const data = await fetch(`${API_PATH}${queryString}`)
+            .then((response) => response.json())
+            .then((json) => json.results)
+            .catch((err) => console.log('Erro ao pegar uma lista\n', err.stack));
+            return data;
+        }
     </script>
     <script src="assets/js/secret.js"></script>
-    <script src="assets/js/main-movie.js"></script>
     <script src="assets/js/categories.js"></script>
+
+    <script src="assets/js/owl/jquery.min.js"></script>
+    <script src="assets/js/owl/owl.carousel.min.js"></script>
+    <script src="assets/js/owl/setup.js"></script>
+
+    <script src="https://kit.fontawesome.com/26e7278bf0.js" crossorigin="anonymous"></script>
+    
+    
+    <script src="assets/js/main-movie.js"></script>
     <script src="assets/js/scroll_navbar.js"></script>
 </body>
 </html>

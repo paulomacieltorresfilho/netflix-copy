@@ -42,13 +42,14 @@ header .logo {
     color: var(--vermelho);
     font-size: 32px;
     font-family: 'Bebas Neue', cursive;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
 }
 
 header nav a {
     color: whitesmoke;
     text-decoration: none;
     margin-right: 15px;
+    font-family: Arial;
 }
 
 header nav a:hover {
@@ -81,7 +82,7 @@ header nav a img {
 }
 
 .filme-principal .titulo {
-    margin-top: 30%;
+    margin-top: 15%;
     font-size: 40px;
     font-weight: bold;
     letter-spacing: 2px;
@@ -130,4 +131,23 @@ header nav a img {
 
 .filme-principal .container {
     width: 60%;
+}
+
+/* FIM DO FILME PRINCIPAL */
+
+/* CARROSSEIS */
+
+.container h4 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.item {
+    /* height: 450px; */
+    /* display: block; */
+    aspect-ratio: calc(9/16);
+}
+
+.owl-carousel .owl-theme {
+    height: 150px;
 }
