@@ -68,6 +68,7 @@ header nav a img {
 
 /* Filme principal */
 
+
 .filme-principal {
     font-size: 18px;
     background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50)100%), url(../img/fundo-padrao.jpg);
@@ -143,7 +144,7 @@ header nav a img {
 }
 
 .item {
-    /* height: 450px; */
+    /* height: 40%; */
     /* display: block; */
     aspect-ratio: calc(9/16);
 }
