@@ -41,7 +41,7 @@ const insertImgs = async (className, func) => {
     const moviesList = await func();
     console.log(itemsList);
     itemsList.forEach((item, index) => {
-        item.src = `${IMAGES_PATH}${moviesList[index].poster_path}`
+        item.src = `${IMAGES_PATH}${POSTER_SIZE}${moviesList[index].poster_path}`
     })
 }
 

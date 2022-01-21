@@ -41,7 +41,7 @@
             </div>
 
         </main>
-        
+
         <div class="carrossel-filmes em-alta container">
             <h4>Em Alta</h4>
             <div class="owl-carousel owl-theme">
@@ -78,7 +78,8 @@
 
         <script>
         const API_PATH = 'https://api.themoviedb.org/3';
-        const IMAGES_PATH = 'https://image.tmdb.org/t/p/original';
+        const IMAGES_PATH = 'https://image.tmdb.org/t/p';
+        const POSTER_SIZE = '/w342';
         
         const getResultsList = async (queryString) => {
             const data = await fetch(`${API_PATH}${queryString}`)

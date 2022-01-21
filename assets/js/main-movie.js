@@ -11,7 +11,7 @@ const loadMainMovie = async () => {
         .then((json) => json.results[Math.floor(Math.random() * json.results.length)])
         .catch((err) => console.log('Um erro ocorreu!: ', err.message));
     const image = data['backdrop_path'];
-    mainMovieDiv.style.background = `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)7%),  url(${IMAGES_PATH + image})`;
+    mainMovieDiv.style.background = `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)7%),  url(${IMAGES_PATH + '/original' + image})`;
     mainMovieDiv.style.backgroundSize = 'cover';
     mainMovie.title.innerHTML = data['title'];
     mainMovie.description.innerHTML = data['overview'];
