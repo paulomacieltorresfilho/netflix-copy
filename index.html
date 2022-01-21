@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+    
     <!-- owl css -->
     <link rel="stylesheet" href="assets/css/owl/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/owl/owl.theme.default.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    
     <title>Netflix</title>
 </head>
 <body>
@@ -31,7 +31,7 @@
 
     <main>
         <div class="filme-principal">
-            <div class="container">
+            <div class="info container">
                 <h3 class="titulo">BREAKING BAD</h3>
                 <p class="descricao">Ao saber que tem câncer, um professor passa a fabricar metanfetamina pelo futuro da família, mudando o destino de todos.</p>
                 <div class="botoes">
@@ -39,11 +39,10 @@
                     <button role="button" id= "mais-info" class="botao"><i class="fas fa-info-circle"></i>Mais informações</button>
                 </div>
             </div>
-        </div>
-    </main>
 
-    <div class="carrossel-filmes em-alta">
-        <div class="container">
+        </main>
+        
+        <div class="carrossel-filmes em-alta container">
             <h4>Em Alta</h4>
             <div class="owl-carousel owl-theme">
                 <div class="item"><img></div>
@@ -68,9 +67,16 @@
                 <div class="item"><img></div>
             </div>
         </div>
-    </div>
-    
-    <script>
+        
+
+
+        <br>
+        <br>
+        <br>
+
+
+
+        <script>
         const API_PATH = 'https://api.themoviedb.org/3';
         const IMAGES_PATH = 'https://image.tmdb.org/t/p/original';
         

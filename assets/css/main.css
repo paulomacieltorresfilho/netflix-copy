@@ -130,8 +130,8 @@ header nav a img {
 }
 
 
-.filme-principal .container {
-    width: 60%;
+.filme-principal .info {
+    max-width: 50%;
 }
 
 /* FIM DO FILME PRINCIPAL */
@@ -144,11 +144,15 @@ header nav a img {
 }
 
 .item {
-    /* height: 40%; */
-    /* display: block; */
-    aspect-ratio: calc(9/16);
+    /* height: 400px; */
+    aspect-ratio: calc(2/3);
+}
+.item img {
+    height: 100%;
+    width: 100%;
 }
 
-.owl-carousel .owl-theme {
-    height: 150px;
+
+.carrossel-filmes.container {
+    margin-top: 12px;
 }

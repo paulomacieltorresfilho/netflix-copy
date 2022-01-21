@@ -37,7 +37,7 @@ const getTvShowsByGenres = async (genres) => {
 }
 
 const insertImgs = async (className, func) => {
-    const itemsList = document.querySelectorAll('.carrossel-filmes .container .item img');
+    const itemsList = document.querySelectorAll(`.carrossel-filmes.${className} .item img`);
     const moviesList = await func();
     console.log(itemsList);
     itemsList.forEach((item, index) => {
