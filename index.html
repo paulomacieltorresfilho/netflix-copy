@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- owl css -->
+    <link rel="stylesheet" href="assets/css/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl/owl.theme.default.min.css">
     <title>Netflix</title>
 </head>
 <body>
@@ -12,7 +16,7 @@
         <div class="container">
             <h2 class="logo fonte-netflix">NETFLIX</h2>
             <nav>
-                <a href="#">Início</a>
+                <a href="#"><b>Início</b></a>
                 <a href="#">Séries</a>
                 <a href="#">Filmes</a>
                 <a href="#">Bombando</a>
@@ -28,18 +32,31 @@
     <main>
         <div class="filme-principal">
             <div class="container">
-                <h3 class="titulo fonte-netflix">BREAKING BAD</h3>
+                <h3 class="titulo">BREAKING BAD</h3>
                 <p class="descricao">Ao saber que tem câncer, um professor passa a fabricar metanfetamina pelo futuro da família, mudando o destino de todos.</p>
                 <div class="botoes">
-                    <button role="button" class="botao"><img src="assets/img/botao-play.png">Assitir agora</button>
-                    <button role="button" class="botao"><img src="assets/img/info.png">Mais informações</button>
+                    <button role="button" id="assistir" class="botao"><i class="fas fa-play"></i>Assitir agora</button>
+                    <button role="button" id= "mais-info" class="botao"><i class="fas fa-info-circle"></i>Mais informações</button>
                 </div>
             </div>
         </div>
+
+
     </main>
 
 
+    <script src="assets/js/owl/jquery.min.js"></script>
+    <script src="assets/js/owl/owl.carousel.min.js"></script>
+    <script src="https://kit.fontawesome.com/26e7278bf0.js" crossorigin="anonymous"></script>
+
+    <script>
+        const API_PATH = 'https://api.themoviedb.org/3';
+        const IMAGES_PATH = 'https://image.tmdb.org/t/p/original';
+        const NETFLIX_PROVIDER_ID = 8;
+    </script>
     <script src="assets/js/secret.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/main-movie.js"></script>
+    <script src="assets/js/categories.js"></script>
+    <script src="assets/js/scroll_navbar.js"></script>
 </body>
 </html>
