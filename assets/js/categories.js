@@ -24,10 +24,9 @@ const getTop = async () => {
 	});
 
 	for (let i = 0; i < movies.length; i++) {
-		if (movies[m] >= tvShows[t]) topMedias.push(movies[m++]);
+		if (movies[m].popularity >= tvShows[t].popularity) topMedias.push(movies[m++]);
 		else topMedias.push(tvShows[t++]);
 	}
-
 	return topMedias;
 }
 
@@ -59,7 +58,7 @@ const getTvShowsByGenres = async (genres) => {
     })
     genresIds = genresIds.join(',');
 
-    return await getResultsList(`/discover/tv?api_key=${API_KEY}&with_genres=${genresIds}&language=pt-BR&sort_by=popularity.desc`);
+    return await getResultsList(`/discover/tv?api_key=${API_KEY}&with_genres=${genresIds}&language=pt-BR&sort_by=vote_average.desc&vote_count.gte=1000&first_air_date.gte=2000-01-01`);
 }
 
 const insertImgs = async (className, func, arg) => {
@@ -72,5 +71,6 @@ const insertImgs = async (className, func, arg) => {
 
 insertImgs('em-alta', getTop);
 insertImgs('f-para-familia', getMoviesByGenres, ['Family']);
+insertImgs('tv-para-familia', getTvShowsByGenres, ['Family']);
 
 
