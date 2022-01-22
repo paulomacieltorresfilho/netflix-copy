@@ -1,0 +1,35 @@
+@media screen and (max-width:700px){
+    header {
+        position: relative;
+    }
+    header .container {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        height: fit-content;
+    }
+    header .container #icones-direita {
+        margin-left: 0;
+        margin-bottom: 8px;
+    }
+    .filme-principal {
+        padding-top: 68px;
+    }
+}
+
+@media screen and (max-width: 871px) {
+    .botoes #mais-info{
+        margin-top: 8px;
+    }
+
+    .filme-principal .descricao {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+    .filme-principal .container {
+        max-width: 50%;
+    }
+}

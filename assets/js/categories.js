@@ -13,16 +13,6 @@ const getTop = async () => {
 	let m, t;
 	m = t = 0;
 
-	console.log('Movies');
-	movies.forEach((item) => {
-		console.log(item.popularity);
-	});
-
-	console.log('Series');
-	tvShows.forEach((item) => {
-		console.log(item.popularity);
-	});
-
 	for (let i = 0; i < movies.length; i++) {
 		if (movies[m].popularity >= tvShows[t].popularity) topMedias.push(movies[m++]);
 		else topMedias.push(tvShows[t++]);
@@ -58,12 +48,13 @@ const getTvShowsByGenres = async (genres) => {
     })
     genresIds = genresIds.join(',');
 
-    return await getResultsList(`/discover/tv?api_key=${API_KEY}&with_genres=${genresIds}&language=pt-BR&sort_by=vote_average.desc&vote_count.gte=1000&first_air_date.gte=2000-01-01`);
+    return await getResultsList(`/discover/tv?api_key=${API_KEY}&with_genres=${genresIds}&language=pt-BR&sort_by=vote_average.desc&vote_count.gte=500&first_air_date.gte=2000-01-01`);
 }
 
 const insertImgs = async (className, func, arg) => {
     const itemsList = document.querySelectorAll(`.carrossel.${className} .item img`);
     const moviesList = await func(arg);
+    console.log(moviesList);
     itemsList.forEach((item, index) => {
         item.src = `${IMAGES_PATH}${POSTER_SIZE}${moviesList[index].poster_path}`
     })

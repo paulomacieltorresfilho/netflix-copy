@@ -5,9 +5,9 @@ $('.owl-carousel').owlCarousel({
     loop:true,
     responsive:{
         0:{
-            items:2.5
+            items:1.5
         },
-        750:{
+        500:{
             items:3.5
         },
         1250:{

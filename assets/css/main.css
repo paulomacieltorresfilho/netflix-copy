@@ -78,7 +78,7 @@ header nav a img {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
     align-items: flex-start;
 }
 
@@ -129,9 +129,9 @@ header nav a img {
     cursor: pointer;
 }
 
-
-.filme-principal .info {
-    max-width: 50%;
+.filme-principal .container {
+    width: 60%;
+    margin-bottom: 5%;
 }
 
 /* FIM DO FILME PRINCIPAL */
